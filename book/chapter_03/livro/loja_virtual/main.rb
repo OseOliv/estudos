@@ -1,17 +1,31 @@
-require_relative 'lib/livro'
+require_relative 'lib/loja_virtual'
 
-teste_e_design = Livro.new("Mauricio Aniche", "123454", 247)
-web_design_responsivo = Livro.new("Tárcio Zemel", "452565", 321)
-teste_e_design2 = Livro.new "Mauricio Aniche", "123454", 247, 60.9
-teste_e_design3 = Livro.new "Mauricio Aniche", "123454", 247, 60.9
+# teste_e_design = Livro.new("Mauricio Aniche", "123454", 247)
+# web_design_responsivo = Livro.new("Tárcio Zemel", "452565", 321)
 
-puts teste_e_design
-puts web_design_responsivo
-puts teste_e_design2.preco
-teste_e_design2.preco = 79.9
-puts teste_e_design2.preco
 
-puts teste_e_design3.instance_variable_get "@preco"
+# puts teste_e_design
+# puts web_design_responsivo
 
-teste_e_design3.instance_variable_set "@preco", 75.5
-puts teste_e_design3.preco
+
+biblioteca = Biblioteca.new
+
+teste_e_design = Livro.new("Mauricio Aniche", "123454", 247, 70.5, :testes)
+web_design_responsivo = Livro.new("Tárcio Zemel", "452565", 321, 67.9, :web_design)
+
+
+# hash = {"123454" => web_design_responsivo,
+# "452565" => web_design_responsivo }
+
+# puts hash["123454"]
+
+
+biblioteca.adiciona teste_e_design
+biblioteca.adiciona web_design_responsivo
+
+for categoria, livros in biblioteca.livros do
+  p categoria
+  for livro in livros do
+    p livro.valor
+  end
+end
