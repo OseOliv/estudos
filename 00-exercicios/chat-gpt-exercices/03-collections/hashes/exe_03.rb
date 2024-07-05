@@ -1,20 +1,9 @@
-# Crie um programa que verifique a idade de uma
-# pessoa e imprima se ela é criança, adolescente,
-# adulta ou idosa.
+# Verifique se uma chave específica existe em um hash.
 
-def pessoa(idade)
-  if idade <= 12
-    puts "CRIANCA"
-  elsif idade <= 19
-    puts "ADOLESCENTE"
-  elsif idade <=64
-    puts "ADULTO"
-  else
-    puts "IDOSO"
-  end
+hash = {:um => 1, :dois => 2, :tres => 3}
+
+if hash.has_key?(:um)
+  puts "Chave existe no hash"
+else
+  puts "Chave nao existe no hash"
 end
-
-pessoa(8)
-pessoa(16)
-pessoa(35)
-pessoa(70)

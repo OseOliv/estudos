@@ -1,12 +1,9 @@
-# Escreva um programa que verifique se um número
-# é positivo, negativo ou zero.
+# Crie um hash com três pares chave-valor e imprima cada chave e valor.
 
-def numero(num)
-  if num == 0
-    puts "Numero e: ZERO"
-  elsif num < 0
-    puts "Numero e NEGATIVO"
-  else
-    puts "Numero e POSITIVO"
-  end
+hash = {"um" => "1", "dois" => "2", "tres" => "3"}
+
+hash.each do |key , value|
+
+  puts "Chave: #{key} - Valor: #{value}"
+
 end

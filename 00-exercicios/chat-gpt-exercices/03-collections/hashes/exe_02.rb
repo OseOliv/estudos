@@ -1,16 +1,12 @@
-# Use unless para imprimir uma
-# mensagem se uma variável for nil.
+# Adicione e remova um par chave-valor de um hash.
 
+hash = {:um => 1, :dois => 2, :tres => 3}
 
+#ADICIONAR UM HASH
+hash[:quatro] = 4
+puts hash
 
-
-def message(msg)
-  unless msg
-    puts "Esta variavel e nil"
-  else
-    puts "Esta variavel nao e nil"
-  end
-end
-
-message(nil)
-message("Oi")
+puts ""
+#REMOVER UM Hash
+hash.delete(:tres)
+puts hash
