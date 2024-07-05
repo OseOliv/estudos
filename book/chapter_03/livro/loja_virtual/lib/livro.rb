@@ -7,9 +7,12 @@ class Livro
     @numero_de_paginas = numero_de_paginas
     @preco = preco
   end
+
   def to_s
     "Autor: #{@autor}, ISBN: #{@isbn}, Paginas: #{@numero_de_paginas}"
   end
+
+
   # def preco
   #   @preco
   # end
