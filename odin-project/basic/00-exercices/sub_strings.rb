@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Implement a method #substrings that takes a word as
 # the first argument and then an array of valid substrings
 # (your dictionary) as the second argument. It should
@@ -16,13 +18,11 @@ def substrings(senteces, dictionary)
 
   words.each do |word|
     dictionary.each do |substring|
-      if word.include?(substring)
-        word_count[substring] += 1
-      end
+      word_count[substring] += 1 if word.include?(substring)
     end
   end
   word_count
 end
 
-dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
+dictionary = %w[below down go going horn how howdy it i low own part partner sit]
 puts substrings("Howdy partner, sit down! How's it going?", dictionary)

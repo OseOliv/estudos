@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Implement a method #stock_picker that takes in an array
 # of stock prices, one for each hypothetical day.
 # It should return a pair of days representing the
